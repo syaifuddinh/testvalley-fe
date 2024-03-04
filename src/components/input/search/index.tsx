@@ -1,4 +1,4 @@
-export default function SearchInput({ placeholder, className = "" }) {
+export default function SearchInput({ placeholder, className = "" }: { placeholder?: string, className?: string }) {
 	return (
 		<div className={`search-input flex items-center relative ${className}`}>	
 			<img
