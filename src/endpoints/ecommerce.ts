@@ -1,6 +1,6 @@
 import { fetchData } from "./core"
 
-export const getBanners = (callback) => {
+export const getBanners = ((callback: { callback: (data: any) => void }) => {
     const url = "https://api.testvalley.kr/main-banner/all"
     fetchData(url)
     .then(data => {
@@ -8,7 +8,7 @@ export const getBanners = (callback) => {
     });
 }
 
-export const getCategories = (callback) => {
+export const getCategories = (callback: { callback: (data: any) => void }) => {
     const url = "https://api.testvalley.kr/main-shortcut/all"
     fetchData(url)
     .then(data => {
@@ -16,7 +16,7 @@ export const getCategories = (callback) => {
     });
 }
 
-export const getCollections = (callback) => {
+export const getCollections = (callback: { callback: (data: any) => void }) => {
     const url = "https://api.testvalley.kr/collections?prearrangedDiscount"
     fetchData(url)
     .then(data => {
