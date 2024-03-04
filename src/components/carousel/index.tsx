@@ -1,4 +1,3 @@
-import Image from "next/image"
 import CircleButton from "@/components/button/circle"
 import Bullet from "@/components/bullet"
 
