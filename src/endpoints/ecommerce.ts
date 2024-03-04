@@ -20,7 +20,7 @@ export const getCollections = (callback: any) => {
     const url = "https://api.testvalley.kr/collections?prearrangedDiscount"
     fetchData(url)
     .then((data: any) => {
-        const newData = data.items.filter(item => {
+        const newData = data.items.filter((item: { type: string, viewType: string }) => {
             return item.type === "SINGLE" && item.viewType === "TILE"
         })
         callback(newData)
