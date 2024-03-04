@@ -1,4 +1,4 @@
-export function toCurrency(number) {
+export function toCurrency(number: string) {
 	let currencyString = number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 	currencyString = currencyString.replace("$", "")
 	currencyString = currencyString.replace(".00", "")
