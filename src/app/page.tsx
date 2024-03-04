@@ -40,17 +40,19 @@ type PriceInfoType = {
   price: number
 }
 
+type MediaType = {
+  uri: string
+}
+
 type PublicationType = {
   id: string,
   title: string,
   rating: string,
+  media: MediaType[],
   priceInfo: PriceInfoType
 }
 
 
-type MediaType = {
-  uri: string
-}
 
 export default function Home() {
     const [banners, setBanners] = useState([] as BannerUIType[])
