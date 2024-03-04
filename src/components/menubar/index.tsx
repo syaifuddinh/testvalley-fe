@@ -1,7 +1,7 @@
 import Image from "next/image"
 import SearchInput from "@/components/input/search"
 
-export default function Menubar({ className }) {
+export default function Menubar({ className }: { className?: string }) {
 	return (
 		<div className="mx-auto max-w-[960px] md:h-[72px] h-[55px] flex items-center justify-between border-b border-gray2">
 			<div className="flex items-center">	
