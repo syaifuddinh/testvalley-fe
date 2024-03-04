@@ -10,6 +10,7 @@ export default function Menubar({ className }: { className?: string }) {
 						src="https://www.testvalley.kr/logo/logo-new.svg"
 						width={128.345}
 						height={25.093}
+						alt="logo"
 					/>
 				</div>
 
