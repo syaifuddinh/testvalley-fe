@@ -36,7 +36,7 @@ type CategoryUIType = {
 }
 
 type PriceInfoType = {
-  discount: number,
+  discountRate: number,
   price: number
 }
 
