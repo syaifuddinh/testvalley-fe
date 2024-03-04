@@ -4,6 +4,12 @@ export default function ItemCard({
 	discount,
 	price,
 	rating
+}: {
+	title: string,
+	src: string,
+	discount: string,
+	price: string,
+	rating: string
 }) {
 	return (
 		<div>
