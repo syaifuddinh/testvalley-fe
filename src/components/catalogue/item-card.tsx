@@ -7,9 +7,9 @@ export default function ItemCard({
 }: {
 	title: string,
 	src: string,
-	discount: string,
-	price: string,
-	rating: string
+	discount: number|string,
+	price: number|string,
+	rating: number|string
 }) {
 	return (
 		<div>
