@@ -120,7 +120,7 @@ export default function Home() {
                const id = item.id
                const title = item.title
                const subtitle = item.subtitle
-               const items = item.items.map(item2 => {
+               const items = item.items.map((item2: { publication: PublicationType, media: MediaType[] }) => {
                    const data = item2.publication 
                    const priceInfo = data.priceInfo
                    const media = data.media[0]
