@@ -35,16 +35,18 @@ type CategoryUIType = {
     src: string
 }
 
-type PublicationType = {
-  id: string,
-  title: string,
-  rating: string
-}
-
 type PriceInfoType = {
   discount: number,
   price: number
 }
+
+type PublicationType = {
+  id: string,
+  title: string,
+  rating: string,
+  priceInfo: PriceInfoType
+}
+
 
 type MediaType = {
   uri: string
@@ -91,7 +93,7 @@ export default function Home() {
     const fetchCollections = () => {
        getCollections((data: any[]) => {
            const first = data[0]
-           const newItems = first.items.map((item: { publication: PublicationType, priceInfo: PriceInfoType, media: MediaType[] }) => {
+           const newItems = first.items.map((item: { publication: PublicationType, media: MediaType[] }) => {
                const data = item.publication 
                const priceInfo = data.priceInfo
                const media = data.media[0]
