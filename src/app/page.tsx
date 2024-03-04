@@ -24,15 +24,26 @@ type CategoryType = {
     imageUrl: string
 }
 
+type BannerUIType = {
+    id: string,
+    src: string
+}
+
+type CategoryUIType = {
+    id: string,
+    title: string,
+    src: string
+}
+
 export default function Home() {
-    const [banners, setBanners] = useState([])
-    const [categories, setCategories] = useState([])
+    const [banners, setBanners] = useState([] as BannerUIType[])
+    const [categories, setCategories] = useState([] as CategoryUIType[])
     const [hotDeals, setHotDeals] = useState({
         title: "",
         subtitle: "",        
         items: []
     })
-    const [collections, setCollections] = useState([])
+    const [collections, setCollections] = useState([] as any[])
 
     const fetchBanners = () => {
        getBanners((data: BannerType[]) => {
