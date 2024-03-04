@@ -60,7 +60,7 @@ export default function Home() {
     }
 
     const fetchCategories = () => {
-       getCategories((data: CategoryType) => {
+       getCategories((data: CategoryType[]) => {
            const newCategories = data.map(item => {
                const id = item.mainShortcutId
                const title = item.title
