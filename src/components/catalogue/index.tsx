@@ -4,8 +4,8 @@ type ItemType = {
 	id: string|number,
 	src: string,
 	title: string,
-	discount: string,
-	price: string,
+	discount: string|number,
+	price: string|number,
 	rating: number|string
 }
 
