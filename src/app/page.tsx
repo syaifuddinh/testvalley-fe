@@ -35,6 +35,21 @@ type CategoryUIType = {
     src: string
 }
 
+type PublicationType = {
+  id: string,
+  title: string,
+  rating: string
+}
+
+type PriceInfoType = {
+  discount: number,
+  price: number
+}
+
+type MediaType = {
+  uri: string
+}
+
 export default function Home() {
     const [banners, setBanners] = useState([] as BannerUIType[])
     const [categories, setCategories] = useState([] as CategoryUIType[])
@@ -76,7 +91,7 @@ export default function Home() {
     const fetchCollections = () => {
        getCollections((data: any[]) => {
            const first = data[0]
-           const newItems = first.items.map(item => {
+           const newItems = first.items.map((item: { publication: PublicationType, priceInfo: PriceInfoType, media: MediaType[] }) => {
                const data = item.publication 
                const priceInfo = data.priceInfo
                const media = data.media[0]
