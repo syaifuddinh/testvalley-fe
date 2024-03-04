@@ -13,6 +13,17 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { toCurrency } from "@/utils/number"
 
+type BannerType = {
+    mainBannerId: string,
+    pcImageUrl: string,
+}
+
+type CategoryType = {
+    mainShortcutId: string,
+    title: string,
+    imageUrl: string
+}
+
 export default function Home() {
     const [banners, setBanners] = useState([])
     const [categories, setCategories] = useState([])
@@ -24,7 +35,7 @@ export default function Home() {
     const [collections, setCollections] = useState([])
 
     const fetchBanners = () => {
-       getBanners((data) => {
+       getBanners((data: BannerType[]) => {
            console.log(data)
            const newBanners = data.map(item => {
                const id = item.mainBannerId
@@ -38,7 +49,7 @@ export default function Home() {
     }
 
     const fetchCategories = () => {
-       getCategories((data) => {
+       getCategories((data: CategoryType) => {
            const newCategories = data.map(item => {
                const id = item.mainShortcutId
                const title = item.title
@@ -52,7 +63,7 @@ export default function Home() {
     }
 
     const fetchCollections = () => {
-       getCollections((data) => {
+       getCollections((data: any[]) => {
            const first = data[0]
            const newItems = first.items.map(item => {
                const data = item.publication 

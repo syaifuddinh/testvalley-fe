@@ -4,6 +4,7 @@ export default function SearchInput({ placeholder, className = "" }) {
 			<img
 				src="https://www.testvalley.kr/common/search.svg"
 				loading="lazy"
+				alt="search"
 				className="absolute left-3 top-2 w-[20px] h-[20px]"
 			/>
 			<input
