@@ -1,6 +1,6 @@
 import { fetchData } from "./core"
 
-export const getBanners = ((callback: any) => {
+export const getBanners = (callback: any) => {
     const url = "https://api.testvalley.kr/main-banner/all"
     fetchData(url)
     .then(data => {
